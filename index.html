@@ -61,7 +61,8 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -82,6 +83,16 @@ nav a:hover {
     color: white;
     border: none;
     font-weight: 500;
+}
+
+section {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
 }
 
 .hero {
@@ -114,20 +125,12 @@ nav a:hover {
     border-radius: 8px;
     font-weight: 600;
     transition: 0.3s;
+    margin: 5px;
+    display: inline-block;
 }
 
 .btn:hover {
     opacity: 0.85;
-}
-
-section {
-    padding: 80px 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 50px;
 }
 
 .cards {
@@ -139,8 +142,8 @@ section {
 .card {
     background: var(--card);
     padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
 }
 
 .card h3 {
@@ -151,19 +154,65 @@ section {
     color: var(--secondary);
 }
 
+/* Education */
+
+.education-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.edu-item {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+    background: var(--card);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+}
+
+.edu-logo img {
+    width: 90px;
+}
+
+.edu-date {
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.edu-desc {
+    color: var(--secondary);
+    margin-bottom: 10px;
+}
+
+.edu-link {
+    text-decoration: none;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.edu-link:hover {
+    text-decoration: underline;
+}
+
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     background: var(--card);
     color: var(--secondary);
 }
 
 @media(max-width:768px){
     .hero h1 {
-        font-size: 34px;
+        font-size: 32px;
     }
-    nav ul {
-        display: none;
+
+    .edu-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 </style>
@@ -172,149 +221,137 @@ footer {
 <body>
 
 <header>
-    <div class="container">
-        <nav>
-            <h2>Abdulhannan Vhora</h2>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#modules">UEL Modules</a></li>
-                <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
-            </ul>
-            <button class="theme-btn" onclick="toggleTheme()">Theme</button>
-        </nav>
-    </div>
+<div class="container">
+<nav>
+<h2>Abdulhannan Vhora</h2>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#modules">UEL Modules</a></li>
+<li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+</ul>
+<button class="theme-btn" onclick="toggleTheme()">Theme</button>
+</nav>
+</div>
 </header>
 
 <section class="hero">
-    <div class="container">
-        <h1>Turning data into <span>meaningful decisions</span>.</h1>
-        <p>MSc Data Science postgraduate with experience in Python, SQL, Power BI, Excel and Machine Learning. I transform complex data into clear, actionable insights.</p>
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="cv.pdf" class="btn" style="margin-left:15px;">Download CV</a>
-    </div>
+<div class="container">
+<h1>Turning data into <span>meaningful decisions</span>.</h1>
+<p>MSc Data Science postgraduate focused on analytics, machine learning, spatial analysis and data storytelling.</p>
+<a href="#projects" class="btn">View Projects</a>
+<a href="cv.pdf" class="btn">Download CV</a>
+</div>
 </section>
 
 <section id="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p style="text-align:center; max-width:700px; margin:auto; color:var(--secondary);">
-            Passionate about data storytelling, predictive modelling, dashboards, and solving business problems through analytics.
-        </p>
-    </div>
+<div class="container">
+<h2 class="section-title">About Me</h2>
+<p style="text-align:center; max-width:700px; margin:auto; color:var(--secondary);">
+I specialise in predictive modelling, dashboards, spatial analytics and quantitative research.
+I enjoy transforming complex data into clear, strategic insights that support real-world decision-making.
+</p>
+</div>
 </section>
 
 <section id="skills">
-    <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="cards">
-            <div class="card"><h3>Programming</h3><p>Python, SQL</p></div>
-            <div class="card"><h3>Data Tools</h3><p>Power BI, Excel</p></div>
-            <div class="card"><h3>Machine Learning</h3><p>Regression, Classification, Clustering</p></div>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title">Skills</h2>
+<div class="cards">
+<div class="card"><h3>Programming</h3><p>Python, SQL, Java</p></div>
+<div class="card"><h3>Data Tools</h3><p>Power BI, Excel, Firebase</p></div>
+<div class="card"><h3>Machine Learning</h3><p>Regression, Classification, Clustering</p></div>
+</div>
+</div>
 </section>
 
 <section id="experience">
-    <div class="container">
-        <h2 class="section-title">Experience</h2>
-        <div class="card">
-            <h3>Data Analyst Role</h3>
-            <p>Worked on dashboards, reporting, and predictive models to support business decisions.</p>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title">Experience</h2>
+<div class="card">
+<h3>Data & Analytics Projects</h3>
+<p>Developed dashboards, predictive models and research-driven analysis using Python, SQL and Power BI.</p>
+</div>
+</div>
 </section>
 
 <section id="projects">
-    <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Sales Dashboard</h3>
-                <p>Interactive Power BI dashboard analyzing KPIs.</p>
-            </div>
-            <div class="card">
-                <h3>ML Prediction Model</h3>
-                <p>Predictive model using Scikit-learn.</p>
-            </div>
-            <div class="card">
-                <h3>SQL Data Analysis</h3>
-                <p>Complex data extraction & reporting.</p>
-            </div>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title">Projects</h2>
+<div class="cards">
+<div class="card">
+<h3>Sales Dashboard</h3>
+<p>Interactive KPI dashboard built in Power BI.</p>
+</div>
+<div class="card">
+<h3>Machine Learning Model</h3>
+<p>Predictive model built using Scikit-learn.</p>
+</div>
+<div class="card">
+<h3>Farm Hub App</h3>
+<p>Android application with Firebase authentication & database integration.</p>
+</div>
+</div>
+</div>
 </section>
 
-    <section id="education">
-    <div class="container">
-        <h2 class="section-title">Academic Background & Key Modules</h2>
+<section id="education">
+<div class="container">
+<h2 class="section-title">Academic Background & Key Modules</h2>
 
-        <div class="education-card">
+<div class="education-wrapper">
 
-            <!-- MSc -->
-            <div class="edu-item">
-                <div class="edu-logo">
-                    <img src="uel-logo.png" alt="University of East London Logo">
-                </div>
+<div class="edu-item">
+<div class="edu-logo">
+<img src="uel-logo.png" alt="University of East London">
+</div>
+<div>
+<h3>MSc Data Science — University of East London</h3>
+<p class="edu-date">Jan 2025 — May 2026 | Predicted: First Class</p>
+<p class="edu-desc">
+Key focus: spatial data analysis, predictive analytics, quantitative modelling, and portfolio-based coursework.
+</p>
+<a href="#modules" class="edu-link">See modules & coursework →</a>
+</div>
+</div>
 
-                <div class="edu-content">
-                    <h3>MSc Data Science — University of East London</h3>
-                    <p class="edu-date">Jan 2025 — May 2026 | Predicted: First Class</p>
+<div class="edu-item">
+<div class="edu-logo">
+<img src="spu-logo.png" alt="Sardar Patel University">
+</div>
+<div>
+<h3>Bachelor of Computer Applications — Sardar Patel University (India)</h3>
+<p class="edu-date">Jun 2021 — May 2024 | Grade: 2:1</p>
+<p class="edu-desc">Modules: Python, SQL, Java, C/C++, HTML</p>
+<p class="edu-desc">
+Final project: “Farm Hub” Android app with Firebase database & authentication.
+</p>
+</div>
+</div>
 
-                    <p class="edu-desc">
-                        Key focus: spatial data analysis, predictive analytics, quantitative modelling, 
-                        and portfolio-based coursework.
-                    </p>
-
-                    <a href="#modules" class="edu-link">See modules & coursework →</a>
-                </div>
-            </div>
-
-            <!-- BCA -->
-            <div class="edu-item">
-                <div class="edu-logo">
-                    <img src="spu-logo.png" alt="Sardar Patel University Logo">
-                </div>
-
-                <div class="edu-content">
-                    <h3>Bachelor of Computer Applications — Sardar Patel University (India)</h3>
-                    <p class="edu-date">Jun 2021 — May 2024 | Grade: 2:1</p>
-
-                    <p class="edu-desc">
-                        Modules: Python, SQL, Java, C/C++, HTML
-                    </p>
-
-                    <p class="edu-desc">
-                        Final project: “Farm Hub” Android app with Firebase database & authentication.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </div>
+</div>
+</div>
 </section>
-
-
 
 <section id="modules">
-    <div class="container">
-        <h2 class="section-title">UEL Modules</h2>
-        <div class="card">
-            <p>Machine Learning, Data Visualisation, Big Data Analytics, Research Methods.</p>
-        </div>
-    </div>
+<div class="container">
+<h2 class="section-title">UEL Modules</h2>
+<div class="card">
+<p>Machine Learning, Spatial Data Analysis, Big Data Analytics, Data Visualisation, Research Methods.</p>
+</div>
+</div>
 </section>
 
 <footer>
-    © 2026 Abdulhannan Vhora | Data Portfolio
+© 2026 Abdulhannan Vhora | Data Portfolio
 </footer>
 
 <script>
 function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
+document.body.classList.toggle("dark-mode");
 }
 </script>
 
