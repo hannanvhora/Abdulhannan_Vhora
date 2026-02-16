@@ -309,50 +309,102 @@ data dashboards, and transforming structured data into strategic insights.
 </div>
 </section>
 
-<section id="projects">
-<div class="container">
-<h2 class="section-title">Featured Project</h2>
+<!-- PROJECT -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Featured Project</h2>
 
-<div class="card">
+    <div class="card">
 
-<h3>Predicting Students' Dropout & Academic Success</h3>
+      <h3>Predicting Students' Dropout & Academic Success</h3>
 
-<p>
-Built and evaluated five machine learning models on 4,424 student records to predict dropout,
-enrolment continuation, and graduation outcomes.
-</p>
+      <p>
+        This project developed a multi-class machine learning system using 4,424
+        student records and 37 academic, demographic, and financial variables
+        to predict Dropout, Enrolled, and Graduate outcomes.
+      </p>
 
-<div class="project-block">
-<h3>Exploratory Data Analysis</h3>
-<div class="project-image">
-<img src="Rplot.png">
-<p class="caption">Target Class Distribution</p>
-</div>
-</div>
+      <!-- Step 1 -->
+      <div class="project-block">
+        <h3>1. Exploratory Data Analysis</h3>
+        <p>
+          Initial analysis revealed 32% dropout rate and moderate class imbalance.
+          Correlation analysis identified admission grades and prior academic
+          performance as strong predictors.
+        </p>
 
-<div class="project-block">
-<h3>Model Comparison</h3>
-<div class="project-image">
-<img src="images/model-comparison.png">
-<p class="caption">Accuracy Comparison of Five Models</p>
-</div>
-</div>
+        <div class="project-image">
+          <img src="Rplot.png">
+          <p class="caption">Target Class Distribution</p>
+        </div>
 
-<div class="project-block highlight">
-<h3>Final Model – Random Forest (78.87% Accuracy)</h3>
-<div class="project-image">
-<img src="images/confusion-rf.png">
-<p class="caption">Confusion Matrix – Random Forest</p>
-</div>
+        <div class="project-image">
+          <img src="images/correlation-heatmap.png">
+          <p class="caption">Correlation Heatmap</p>
+        </div>
+      </div>
 
-<div class="project-image">
-<img src="images/feature-importance.png">
-<p class="caption">Feature Importance Analysis</p>
-</div>
-</div>
+      <!-- Step 2 -->
+      <div class="project-block">
+        <h3>2. Regression Tree Model (75.59% Accuracy)</h3>
+        <div class="project-image">
+          <img src="regression.png">
+          <p class="caption">Regression Tree Structure</p>
+        </div>
+      </div>
 
-</div>
-</div>
+      <!-- Step 3 -->
+      <div class="project-block">
+        <h3>3. Support Vector Machine (77.29% Accuracy)</h3>
+        <div class="project-image">
+          <img src="svm.png">
+          <p class="caption">Confusion Matrix – SVM</p>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="project-block">
+        <h3>4. K-Nearest Neighbors (59.32% Accuracy)</h3>
+        <div class="project-image">
+          <img src="knn.png">
+          <p class="caption">Confusion Matrix – KNN</p>
+        </div>
+      </div>
+
+      <!-- Final Model -->
+      <div class="project-block highlight">
+        <h3>5. Random Forest – Final Model (78.87% Accuracy)</h3>
+        <p>
+          The Random Forest model achieved the highest performance, correctly
+          classifying 417 graduates and 225 dropout cases, demonstrating
+          strong predictive reliability.
+        </p>
+
+        <div class="project-image">
+          <img src="images/confusion-rf.png">
+          <p class="caption">Confusion Matrix – Random Forest</p>
+        </div>
+
+        <div class="project-image">
+          <img src="images/feature-importance.png">
+          <p class="caption">Feature Importance Analysis</p>
+        </div>
+
+        <div class="project-image">
+          <img src="comparison.png">
+          <p class="caption">Model Accuracy Comparison</p>
+        </div>
+      </div>
+
+      <p>
+        This project demonstrates a complete end-to-end machine learning workflow,
+        including preprocessing, multi-model evaluation, performance comparison,
+        and feature importance analysis. The final model achieved nearly 79%
+        predictive accuracy, supporting early intervention strategies in higher education.
+      </p>
+
+    </div>
+  </div>
 </section>
 
 <section id="education">
